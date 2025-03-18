@@ -63,12 +63,11 @@ ENV TORCH_CUDA_ARCH_LIST="3.5;5.0;6.0;6.1;7.0;7.5;8.0;8.6+PTX"
     
 # OpenPCDet
 RUN pip3 install numpy==1.23.0 llvmlite numba tensorboardX easydict pyyaml scikit-image tqdm SharedArray open3d mayavi av2 kornia==0.5.8 pyquaternion
-RUN pip3 install spconv-cu116
-RUN pip3 install torch-scatter
+RUN pip3 install spconv-cu116 torch-scatter
 
-RUN git clone https://github.com/open-mmlab/OpenPCDet.git
+RUN git clone https://github.com/dzenan2k/OpenPCDet.git
 
-WORKDIR OpenPCDet
+WORKDIR /OpenPCDet
 
 RUN python3 setup.py develop
     
@@ -79,3 +78,5 @@ ENV NVIDIA_VISIBLE_DEVICES="all" \
     NVIDIA_DRIVER_CAPABILITIES="video,compute,utility,graphics" \
     LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/lib:/usr/lib:/usr/local/lib \
     QT_GRAPHICSSYSTEM="native"
+
+WORKDIR /OpenPCDet
