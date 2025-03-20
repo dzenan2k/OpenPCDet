@@ -79,6 +79,9 @@ ENV NVIDIA_VISIBLE_DEVICES="all" \
     LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/lib:/usr/lib:/usr/local/lib \
     QT_GRAPHICSSYSTEM="native"
 
+WORKDIR /OpenPCDet/data
+RUN mkdir waymo    
+
 WORKDIR /OpenPCDet
 
 # Setting up symbolic links
