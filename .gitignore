@@ -14,4 +14,3 @@ venv/
 *.bin
 output
 version.py
-data/
