@@ -80,3 +80,15 @@ ENV NVIDIA_VISIBLE_DEVICES="all" \
     QT_GRAPHICSSYSTEM="native"
 
 WORKDIR /OpenPCDet
+
+# Setting up symbolic links
+RUN ln -s /OpenPCDet/datasets/waymo/raw_data /OpenPCDet/data/waymo/raw_data \ 
+    ln -s /OpenPCDet/datasets/waymo/ImageSets /OpenPCDet/data/waymo/ImageSets
+
+# Installing waymo-open-dataset
+RUN pip3 install --upgrade pip \
+    pip3 install waymo-open-dataset-tf-2-5-0 \
+    pip3 install protobuf==3.20.* --upgrade \
+    pip3 install numpy==1.23.0 --upgrade
+
+WORKDIR /OpenPCDet/tools
