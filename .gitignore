@@ -4,6 +4,7 @@
 **dist**
 *.pyc
 venv/
+data/
 *.idea/
 *.so
 *.yaml
