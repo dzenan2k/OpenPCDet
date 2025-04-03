@@ -87,9 +87,9 @@ RUN mkdir datasets/waymo
 RUN ln -s /OpenPCDet/datasets/waymo/raw_data /OpenPCDet/data/waymo/raw_data
 
 # Installing waymo-open-dataset
-RUN pip3 install --upgrade pip \
-    pip3 install waymo-open-dataset-tf-2-5-0 \
-    pip3 install protobuf==3.20.* --upgrade \
-    pip3 install numpy==1.23.0 --upgrade
+RUN pip3 install --upgrade pip
+RUN pip3 install waymo-open-dataset-tf-2-5-0
+RUN pip3 install protobuf==3.20.* --upgrade
+RUN pip3 install numpy==1.23.0 --upgrade
 
 WORKDIR /OpenPCDet/tools
