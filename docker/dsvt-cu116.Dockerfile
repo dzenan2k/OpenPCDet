@@ -80,6 +80,7 @@ ENV NVIDIA_VISIBLE_DEVICES="all" \
     QT_GRAPHICSSYSTEM="native"
 
 WORKDIR /OpenPCDet
+RUN mkdir datasets
 RUN mkdir datasets/waymo
 
 # Setting up symbolic links
