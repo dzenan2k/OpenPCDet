@@ -79,14 +79,11 @@ ENV NVIDIA_VISIBLE_DEVICES="all" \
     LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/lib:/usr/lib:/usr/local/lib \
     QT_GRAPHICSSYSTEM="native"
 
-WORKDIR /OpenPCDet/data
-RUN mkdir waymo    
-
 WORKDIR /OpenPCDet
+RUN mkdir datasets/waymo
 
 # Setting up symbolic links
-RUN ln -s /OpenPCDet/datasets/waymo/raw_data /OpenPCDet/data/waymo/raw_data \ 
-    ln -s /OpenPCDet/datasets/waymo/ImageSets /OpenPCDet/data/waymo/ImageSets
+RUN ln -s /OpenPCDet/datasets/waymo/raw_data /OpenPCDet/data/waymo/raw_data
 
 # Installing waymo-open-dataset
 RUN pip3 install --upgrade pip \
