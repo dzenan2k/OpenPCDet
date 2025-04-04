@@ -90,4 +90,4 @@ RUN pip3 install waymo-open-dataset-tf-2-5-0
 RUN pip3 install protobuf==3.20.* --upgrade
 RUN pip3 install numpy==1.23.0 --upgrade
 
-WORKDIR /OpenPCDet
+WORKDIR /OpenPCDet/tools
