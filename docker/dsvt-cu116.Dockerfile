@@ -84,9 +84,6 @@ WORKDIR /OpenPCDet
 RUN mkdir datasets
 RUN mkdir datasets/waymo
 
-# Setting up symbolic links
-RUN ln -s /OpenPCDet/datasets/waymo/raw_data /OpenPCDet/data/waymo/raw_data
-
 # Installing waymo-open-dataset
 RUN pip3 install --upgrade pip
 RUN pip3 install waymo-open-dataset-tf-2-5-0
