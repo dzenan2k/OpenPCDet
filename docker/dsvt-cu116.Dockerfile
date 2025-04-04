@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
     git zip unzip libssl-dev libcairo2-dev lsb-release libgoogle-glog-dev libgflags-dev libatlas-base-dev libeigen3-dev software-properties-common \
     build-essential cmake pkg-config libapr1-dev autoconf automake libtool curl libc6 libboost-all-dev debconf libomp5 libstdc++6 \
     libqt5core5a libqt5xml5 libqt5gui5 libqt5widgets5 libqt5concurrent5 libqt5opengl5 libcap2 libusb-1.0-0 libatk-adaptor neovim \
-    python3-pip python3-tornado python3-dev python3-numpy python3-virtualenv libpcl-dev libgoogle-glog-dev libgflags-dev libatlas-base-dev \
+    python3-pip python3-tornado python3-dev python3-numpy python3-virtualenv nano libpcl-dev libgoogle-glog-dev libgflags-dev libatlas-base-dev \
     libsuitesparse-dev python3-pcl pcl-tools libgtk2.0-dev libavcodec-dev libavformat-dev libswscale-dev libtbb2 libtbb-dev libjpeg-dev \
     libpng-dev libtiff-dev libdc1394-22-dev xfce4-terminal &&\
     rm -rf /var/lib/apt/lists/*
