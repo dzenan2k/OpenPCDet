@@ -63,7 +63,8 @@ ENV TORCH_CUDA_ARCH_LIST="3.5;5.0;6.0;6.1;7.0;7.5;8.0;8.6+PTX"
     
 # OpenPCDet
 RUN pip3 install numpy==1.23.0 llvmlite numba tensorboardX easydict pyyaml scikit-image tqdm SharedArray open3d mayavi av2 kornia==0.5.8 pyquaternion
-RUN pip3 install spconv-cu116 torch-scatter
+RUN pip3 install spconv-cu116
+RUN pip3 install torch-scatter -f https://data.pyg.org/whl/torch-1.13.1+cu116.html
 
 RUN git clone https://github.com/dzenan2k/OpenPCDet.git
 
